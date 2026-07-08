@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { HeroIllustration } from '@/components/HeroIllustration';
 import { Link } from 'wouter';
 import {
   Check,
@@ -111,61 +112,83 @@ export default function Landing() {
       <main className="pt-16">
         
         {/* HERO SECTION */}
-        <section className="relative pt-20 pb-24 lg:pt-32 lg:pb-40 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100 via-transparent to-transparent opacity-60 pointer-events-none"></div>
-          
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <motion.div initial="hidden" animate="visible" variants={fadeIn}>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 font-medium text-sm mb-6 border border-blue-100">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                </span>
-                A solução definitiva para o seu negócio
-              </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-6 leading-[1.1]">
-                Seu negócio merece um <span className="text-blue-600">site profissional.</span>
-              </h1>
-              <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Tenha uma presença online de respeito para sua barbearia, padaria ou loja sem gastar fortunas e sem dor de cabeça. Rápido, bonito e pronto para vender.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a 
-                  href={WHATSAPP_URL} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-600/25 flex items-center justify-center gap-2"
-                >
-                  Falar no WhatsApp
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <a 
-                  href="#exemplos" 
-                  className="w-full sm:w-auto bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-full font-semibold text-lg hover:bg-slate-50 transition-all flex items-center justify-center gap-2"
-                >
-                  Ver exemplos
-                </a>
-              </div>
+       <section className="relative pt-20 pb-24 lg:pt-32 lg:pb-40 overflow-hidden">
+  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100 via-transparent to-transparent opacity-60 pointer-events-none" />
 
-              <div className="mt-12 flex items-center justify-center gap-4 text-sm text-slate-500 font-medium">
-                <div className="flex -space-x-2">
-                  {[1,2,3,4].map(i => (
-                    <div key={i} className="w-8 h-8 rounded-full bg-slate-200 border-2 border-slate-50 flex items-center justify-center overflow-hidden">
-                      <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="User" />
-                    </div>
-                  ))}
-                </div>
-                <div className="flex flex-col items-start text-left">
-                  <div className="flex text-amber-400">
-                    {[1,2,3,4,5].map(i => <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}
-                  </div>
-                  <span>+ de 200 negócios atendidos</span>
-                </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+
+      {/* Texto — Esquerda */}
+      <motion.div
+        className="flex-1 text-center lg:text-left"
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+      >
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 font-medium text-sm mb-6 border border-blue-100">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
+          </span>
+          A solução definitiva para o seu negócio
+        </div>
+
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 mb-6 leading-[1.1]">
+          Seu negócio merece um{' '}
+          <span className="text-blue-600">site profissional.</span>
+        </h1>
+
+        <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+          Tenha uma presença online de respeito para sua barbearia, padaria ou loja sem gastar fortunas e sem dor de cabeça. Rápido, bonito e pronto para vender.
+        </p>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-sm hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-600/25 flex items-center justify-center gap-2"
+          >
+            Falar no WhatsApp
+            <ArrowRight className="w-5 h-5" />
+          </a>
+          <a
+            href="#exemplos"
+            className="w-full sm:w-auto bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-full font-semibold text-sm hover:bg-slate-50 transition-all flex items-center justify-center gap-2"
+          >
+            Ver exemplos
+          </a>
+        </div>
+
+        <div className="mt-12 flex items-center justify-center lg:justify-start gap-4 text-sm text-slate-500 font-medium">
+          <div className="flex -space-x-2">
+            {[1,2,3,4].map(i => (
+              <div key={i} className="w-8 h-8 rounded-full bg-slate-200 border-2 border-slate-50 overflow-hidden">
+                <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="User" />
               </div>
-            </motion.div>
+            ))}
           </div>
-        </section>
+          <div className="flex flex-col items-start text-left">
+            <div className="flex text-amber-400">
+              {[1,2,3,4,5].map(i => (
+                <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <span>+ de 200 negócios atendidos</span>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Ilustração — Direita */}
+      <div className="flex-1 w-full hidden lg:block">
+        <HeroIllustration />
+      </div>
+
+    </div>
+  </div>
+</section>
 
         {/* BENEFITS */}
         <section className="py-24 bg-white">
