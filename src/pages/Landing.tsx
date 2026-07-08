@@ -50,11 +50,11 @@ export default function Landing() {
     <div className="min-h-screen bg-blue-100 text-slate-900 font-sans selection:bg-slate-100 selection:text-blue-900 overflow-x-hidden">
       
       {/* NAVBAR */}
-      <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
+     <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg flex items-center justify-center"><img src="/favicon.png" alt="Logo" className="w-9 h-9" /></div>
-           <span className="text-2xl font-bold text-slate-600 ">Site<span className="text-blue-600 font-bold text-2xl">Fácil</span></span>
+           <div className="w-8 h-8 rounded-lg flex items-center justify-center"><img src="/favicon.png" alt="Logo" className="w-9 h-9" /></div> <a href="/">
+           <span className="text-2xl font-bold text-slate-600 ">Site<span className="text-blue-600 font-bold text-2xl">Fácil</span></span></a>
           </div>
           
           <nav className="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm">
